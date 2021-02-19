@@ -2,28 +2,25 @@
 <html>
 	<head>
 		<meta charset="utf-8">
-		<title>MinecraftServer Download</title>
+		<title>MinecraftServer Download - 外置下载</title>
 		<link rel="shortcut icon" href="https://ddos_ling.gitee.io/minecraftserver-download/logo.ico">
+		<meta http-equiv="Pragma" content="no-cache">
+		<meta http-equiv="Cache-Control" content="no-cache">
+		<meta http-equiv="Expires" content="0">
 
 		<!--引入dw样式-->
 		<link type="text/css" rel="styleSheet" href="https://ddos_ling.gitee.io/minecraftserver-download/css/dw_style.css" />
 
 		<!--引入MDUI-->
-		<!-- MDUI CSS -->
 		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/mdui@1.0.0/dist/css/mdui.min.css" integrity="sha384-2PJ2u4NYg6jCNNpv3i1hK9AoAqODy6CdiC+gYiL2DVx+ku5wzJMFNdE3RoWfBIRP"
-		 crossorigin="anonymous" />
-		<!-- MDUI JavaScript -->
+		 crossorigin="anonymous"/>
 		<script src="https://cdn.jsdelivr.net/npm/mdui@1.0.0/dist/js/mdui.min.js" integrity="sha384-aB8rnkAu/GBsQ1q6dwTySnlrrbhqDwrDnpVHR2Wgm8pWLbwUnzDcIROX3VvCbaK+"
 		 crossorigin="anonymous"></script>
 
-		<style>
-			body {
-				align-items: center;
-				justify-content: center;
-		    }
-		  </style>
+		<!--引入lanzou-download样式-->
+		<link type="text/css" rel="styleSheet" href="./css/lanzou-download.css" />
 	</head>
-	<body>
+	<body class="mdui-theme-primary-indigo mdui-theme-accent-pink mdui-theme-layout-auto">
 		<!--顶部空白填充-->
 		<div class="dw-upper"></div>
 
@@ -38,24 +35,42 @@
 		<!--标题-->
 		<!--<p style="width: 100%;text-align: center;font-size: 30px;color:#000000;">我的世界服务端下载站</p>-->
 		<div class="dw-upper"></div>
-
-		<div class="dw mdui-theme-layout-auto">
+		
+		<!--下载框-->
+		<iframe name="download" class="dw-iframe dw mdui-theme-layout-auto mdui-shadow-24" frameBorder="0" id="download" scrolling="no" security="restricted" sandbox0="allow-scripts allow-same-origin allow-popups"></iframe>
+		<div class="dw-upper"></div>
+		<div class="dw mdui-theme-layout-auto mdui-shadow-24">
 			<ul class="mdui-list" mdui-collapse="{accordion: true}">
-				<p style="width: 100%;text-align: center;font-size: 50px;height: 20px;">404 找不到页面</p>
-				<p style="width: 100%;text-align: center;font-size: 30px;height: 40px;">Page Not Found</p>
+				<li class="mdui-list-item mdui-ripple">
+					<i class="mdui-icon material-icons">info</i>
+					<a class="mdui-list-item-content">下载密码:stgzs</a>
+				</li>
+				<li class="mdui-list-item mdui-ripple">
+					<i class="mdui-icon material-icons">file_download</i>
+					<a href="http://www.lanzou.com/account.php?action=register&VidQOwQyVWRUZ1MwCmcEalQ3UWNZMg==" class="mdui-list-item-content">由 蓝奏云 提供高速下载服务</a>
+				</li>
 				<li class="mdui-list-item mdui-ripple">
 					<i class="mdui-icon material-icons">keyboard_backspace</i>
-					<a href="https://ddos_ling.gitee.io/minecraftserver-download/" class="mdui-list-item-content">返回主界面</a>
-					<i class="mdui-icon material-icons">keyboard_backspace</i>
+					<a href="./all.html" class="mdui-list-item-content">返回</a>
 				</li>
 			</ul>
+		
 		</div>
-
+		
+		<!--分隔-->
+		<div class="dw-upper"></div>
+		
+		<!--引入JS-->
+		<script src="./js/lanzou-download.js"></script>
+		
+		<!--IP地址信息-->
 		<script src="https://pv.sohu.com/cityjson?ie=utf-8"></script>
 		<script type="text/javascript">
 			document.write("<p style='width: 100%;text-align: center;font-size: 15px;color:#C0C0C0;'>Your IP:" + returnCitySN[
 				"cip"] + "&nbsp&nbsp&nbspIP location:" + returnCitySN["cname"])
 		</script>
-		<p style="width: 100%;text-align: center;font-size: 15px;color:#C0C0C0;">Service provided by DDoS_LING</p>
+
+		<!--底部信息-->
+		<p style="width: 100%;text-align: center;font-size: 15px;color:#C0C0C0;">Service provided by DDoS_LING</p>		
 	</body>
 </html>
